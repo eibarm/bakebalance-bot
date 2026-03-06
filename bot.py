@@ -7,6 +7,10 @@ from threading import Thread
 BOT_TOKEN = os.environ.get('BOT_TOKEN')
 ADMIN_CHAT_ID = os.environ.get('ADMIN_CHAT_ID')
 
+# Debug: verificar variables
+print(f"🔍 BOT_TOKEN leído: {BOT_TOKEN[:10]}..." if BOT_TOKEN else "❌ BOT_TOKEN NO encontrado")
+print(f"🔍 ADMIN_CHAT_ID leído: {ADMIN_CHAT_ID}")
+
 # Verificar que las variables existen
 if not BOT_TOKEN or not ADMIN_CHAT_ID:
     print("❌ ERROR: Faltan las variables BOT_TOKEN o ADMIN_CHAT_ID")
