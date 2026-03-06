@@ -27,7 +27,9 @@ def home():
     return "✅ Bot de BakeBalance funcionando correctamente"
 
 def run_flask():
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
+    # Render inyecta la variable de entorno 'PORT' automáticamente.
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host='0.0.0.0', port=port)
 
 # Manejador de mensajes
 @bot.message_handler(func=lambda message: True)
